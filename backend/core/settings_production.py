@@ -25,7 +25,7 @@ if CUSTOM_DOMAIN:
     ALLOWED_HOSTS.append(CUSTOM_DOMAIN)
 
 # Always allow localhost for health checks
-ALLOWED_HOSTS.extend(['localhost', '127.0.0.1'])
+ALLOWED_HOSTS.extend(['localhost', '127.0.0.1','school-ms-m6ns.onrender.com'])
 
 INSTALLED_APPS = [
     'django.contrib.admin',
