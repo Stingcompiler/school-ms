@@ -4,17 +4,15 @@ set -o errexit
 
 echo "Deploying..."
 
-# 1. Skip Frontend Build (You already did this locally!)
-
-# 2. Go into the backend folder
+# 1. Enter the backend folder
 cd backend
 
-# 3. Install Python requirements
+# 2. Install Python requirements
 pip install -r requirements.txt
 
-# 4. Collect static files
-# (This will take your uploaded 'frontend_build' and move it to 'staticfiles')
-python manage.py collectstatic --noinput
+# 3. Collect static files
+# We FORCE it to use 'core.settings_production' here
+python manage.py collectstatic --noinput --settings=core.settings_production
 
-# 5. Run DB migrations
-python manage.py migrate
+# 4. Run Migrations
+python manage.py migrate --settings=core.settings_production
