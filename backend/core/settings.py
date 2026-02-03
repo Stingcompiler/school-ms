@@ -11,7 +11,7 @@ SECRET_KEY = 'django-insecure-change-this-in-production-alnajah-sms-2024'
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1' ,'localhost:5173']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1' ,'localhost:5173','school-ms-m6ns.onrender.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
