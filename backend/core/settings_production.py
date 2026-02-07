@@ -98,8 +98,14 @@ USE_TZ = True
 # Static files
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+#STATICFILES_DIRS = [
+ #   BASE_DIR / 'frontend_build',] 
+
+# settings.py
+
+# This goes up one level from 'backend' to the project root
 STATICFILES_DIRS = [
-    BASE_DIR / 'frontend_build',
+    BASE_DIR.parent / 'frontend_build',
 ]
 #STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
