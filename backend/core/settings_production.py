@@ -104,13 +104,14 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 # settings.py
 
 # This goes up one level from 'backend' to the project root
-STATICFILES_DIRS = [
-    BASE_DIR.parent / 'frontend_build',
-]
+#STATICFILES_DIRS = [
+ #   BASE_DIR.parent / 'frontend_build',]
 #STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR.parent, 'frontend_build'),
+]
 # CORS settings
 CORS_ALLOWED_ORIGINS = [
     origin.strip()
